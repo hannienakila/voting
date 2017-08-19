@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+    <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="vote.js"></script>
+    </head>
+<body >
+<div style="margin-top: 80px;">
+<center><label style="font-size: 50px; color: gray; font-family: Century Gothic;">Login</label></center>
+</div>
+<center>
+<div ng-app="App" ng-controller="myCtrl" style="background-color: #eaebef; width: 400px; height: 450px; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <img src="image/char.png" width="150px" height="150px" style="margin-top: 40px;"> 
+    <form ng-controller="myCtrl">
+    <input type="text" name="username" ng-model = "user" placeholder="&nbsp;Username" style="width: 300px; height: 40px; margin-top: 20px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px;" required /><br>
+    <input type="password" name="password" ng-model= "pass" placeholder="&nbsp;Password" style="width: 300px; height: 40px; margin-top: 1px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px;" required /><br>
+
+        <button type="submit" ng-click="log();user=null;pass=null;"  style="background-color: #4d90ef; color: white; width: 300px; height: 45px; margin-top: 13px;  font-size: 20px; border: none; border-radius: 2px;">Login</button>
+    </form>
+    <button type="submit" ng-click="Bac()"  style="background-color: #4d90ef; color: white; width: 300px; height: 45px; margin-top: 5px;  font-size: 20px; border: none; border-radius: 2px;">Back</button>
+    </div></center>
+    
+</body>
+
+</html>
+

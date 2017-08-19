@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="vote.js"></script>
+<body>
+<div style="margin-top: 80px;">
+<center><label style="font-size: 50px; color:gray; font-family: century Gothic;">Admin Registration Form</label></center></div>
+
+<div ng-app="App" ng-controller="myCtrl" >
+<center><div style="background-color: #eaebef; width: 500px; height: 500px; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form>
+                <input ng-model="adminUser" placeholder="&nbsp;username" type="text" style="width: 250px; height: 30px; margin-top: 20px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px;" required><br>
+        
+                <input ng-model="adminPass" placeholder="&nbsp;password" type="text" style="width: 250px; height: 30px; margin-top: 20px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px;" required><br>
+
+                <input ng-model="adminConpass" placeholder="&nbsp;confirm password" type="text"  style="width: 250px; height: 30px; margin-top: 20px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px;" required><br><br>
+           <br>
+           <button ng-click="adminRegg();adminUser=null;adminPass=null;adminConpass=null;" style="background-color: #4d90ef; color: white; width: 300px; height: 45px; margin-top: 13px;  font-size: 20px; border: none; border-radius: 2px;">Register!</button> 
+     
+     
+    </form>
+        <button ng-click="Back()" style="background-color: #4d90ef; color: white; width: 300px; height: 45px; margin-top: 13px;  font-size: 20px; border: none; border-radius: 2px;">Back</button> 
+    
+    </div>
+<br><br><br><br><br>
+  
+
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    
+</script>

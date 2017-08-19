@@ -1,0 +1,17 @@
+{
+  "name": "election_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hannie",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

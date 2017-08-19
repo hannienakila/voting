@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="vote.js"></script>
+
+
+
+<body ng-app="App" ng-controller="voteCtrl">
+
+<nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+   <ul class="nav navbar-nav navbar-right">   
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li> 
+   </ul>
+ </div>
+</nav>
+
+<center>
+<div style="width: 900px; height: auto; margin-top: 5px; padding-top: 5px; padding-bottom: 20px; border-radius:  3px; box-shadow: 0px 2px 5px #888888;">
+
+<center>
+<div style="background-color: #eaebef; width: 800px; height: auto; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form  >
+<table>
+    <thead>
+        <tr>
+            <th style="color: gray; font-family: Century Gothic; font-size: 20px; ">President</th>
+            
+        </tr>
+    </thead>
+</table>
+    </form>
+    </div></center>
+<center>
+<div style="width: 800px; height: auto; margin-top: 5px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form>
+<table>
+        <tr ng-repeat="c in dis | filter : {post : 'President'} ">
+            <td scope="row"> {{ c.canfirst+ " "+ c.canmiddle+ " " + c.canlast }} </td>
+            <td> <input type="radio" name="pres" ng-model="canfirst" ng-value="c.canfirst"> </td>
+        </tr>
+</table>
+    </form>
+    </div></center>
+
+<center>
+<div style="background-color: #eaebef; width: 800px; height: auto; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form  >
+<table>
+    <thead>
+        <tr>
+            <th style="color: gray; font-family: Century Gothic; font-size: 20px; ">Vice President</th>
+            
+        </tr>
+    </thead>
+</table>
+    </form>
+    </div></center>
+<center>
+<div style="width: 800px; height: auto; margin-top: 5px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form >
+<table>
+        <tr ng-repeat="c in dis | filter : {post : 'Vice'} ">
+            <td scope="row"> {{ c.canfirst+ " "+ c.canmiddle+ " " + c.canlast }} </td>
+            <td> <input type="radio" name="vice" ng-model="canfirst" ng-value="c.canfirst"> </td>
+        </tr>
+</table>
+    </form>
+    </div></center>
+
+
+<center>
+<div style="background-color: #eaebef; width: 800px; height: auto; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form>
+<table>
+    <thead>
+        <tr>
+            <th style="color: gray; font-family: Century Gothic; font-size: 20px; ">Secretary</th>
+            
+        </tr>
+    </thead>
+</table>
+    </form>
+    </div></center>
+<center>
+<div style="width: 800px; height: auto; margin-top: 5px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form  >
+<table>
+        <tr ng-repeat="c in dis | filter : {post : 'Secretary'} ">
+            <td scope="row"> {{ c.canfirst+ " "+ c.canmiddle+ " " + c.canlast }} </td>
+            <td> <input type="radio" name="sec" </td>
+        </tr>
+</table>
+    </form>
+    </div></center>
+
+<center>
+<div style="background-color: #eaebef; width: 800px; height: auto; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form>
+<table>
+    <thead>
+        <tr>
+            <th style="color: gray; font-family: Century Gothic; font-size: 20px; ">Treasurer</th>
+            
+        </tr>
+    </thead>
+</table>
+    </form>
+    </div></center>
+<center>
+<div style="width: 800px; height: auto; margin-top: 5px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form >
+<table>
+        <tr ng-repeat="c in dis | filter : {post : 'Treasurer'} ">
+            <td scope="row"> {{ c.canfirst+ " "+ c.canmiddle+ " " + c.canlast }} </td>
+            <td> <input type="radio" name="tre"> </td>
+        </tr>
+</table>
+    </form>
+    </div></center>
+
+
+<center>
+<div style="background-color: #eaebef; width: 800px; height: auto; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form>
+<table>
+    <thead>
+        <tr>
+            <th style="color: gray; font-family: Century Gothic; font-size: 20px; ">Auditor</th>
+            
+        </tr>
+    </thead>
+</table>
+    </form>
+    </div></center>
+<center>
+<div style="width: 800px; height: auto; margin-top: 5px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form >
+<table>
+        <tr ng-repeat="c in dis | filter : {post : 'Auditor'} ">
+            <td scope="row"> {{ c.canfirst+ " "+ c.canmiddle+ " " + c.canlast }} </td>
+            <td> <input type="radio" name="aud"> </td>
+        </tr>
+</table>
+    </form>
+    </div></center>
+
+
+<center>
+<div style="background-color: #eaebef; width: 800px; height: auto; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form>
+<table>
+    <thead>
+        <tr>
+            <th style="color: gray; font-family: Century Gothic; font-size: 20px; ">P.I.O</th>
+            
+        </tr>
+    </thead>
+</table>
+    </form>
+    </div></center>
+<center>
+<div style="width: 800px; height: auto; margin-top: 5px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+<div>
+    <form  >
+<table>
+        <tr ng-repeat="c in dis | filter : {post : 'PIO'} ">
+            <td scope="row"> {{ c.canfirst+ " "+ c.canmiddle+ " " + c.canlast }} </td>
+            <td> <input type="radio" name="pio"> </td>
+        </tr>
+</table>
+    </form>
+    </center>
+
+
+<button ng-click="subvotes()" style="background-color: #4d90ef; color: white; width: 300px; height: 45px; margin-top: 13px;  font-size: 20px; border: none; border-radius: 2px;">Submit</button>
+<button ng-click="logout()" style="background-color: #4d90ef; color: white; width: 300px; height: 45px; margin-top: 13px;  font-size: 20px; border: none; border-radius: 2px;">Logout</button>
+</div>
+</div>
+</body>
+</html>
+

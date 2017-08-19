@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="vote.js"></script>
+
+
+
+<body ng-app="App" ng-controller="myCtrl">
+
+<nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+   <ul class="nav navbar-nav navbar-right">
+   <li class="active"><a href="#!adminpage">Home</a></li>   
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li><a href="#!AddCan">ADD Candidates</a></li>
+         <li><a href="#!CanView">View Candidates</a></li>
+         <li><a href="#!ViewVote">View Voters</a></li>
+       </ul>
+     </li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li> 
+   </ul>
+ </div>
+</nav>
+
+<center>
+<div style=" width: 800px; height: 400px; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+    <form ng-controller="myCtrl" >
+    <br><br>
+    <center>
+<div style="background-color: #eaebef; width: 420px; height: auto; margin-top: 30px; border-radius: 3px; box-shadow: 0px 2px 5px #888888;">
+<table>
+    <thead>
+        <tr>
+            <th style="color: gray; font-family: Century Gothic; font-size: 20px; ">Candidates</th>
+            
+        </tr>
+    </thead>
+</table>
+    </form>
+    </div></center>
+    <form ng-controller="myCtrl" >
+    <select ng-model="positions" style="width: 420px; height: 40px; margin-top: 10px;  font-size: 20px; color: gray; font-family: Century Gothic;" required>
+    <option value=""></option>
+        <option value="President">President</option>
+        <option value="Vice">Vice President</option>
+        <option value="Secretary">Secretary</option>
+        <option value="Treasurer">Treasurer</option>
+        <option value="Auditor">Auditor</option>
+        <option value="PIO">P.I.O</option>
+    </select><br>
+    <input type="text"  ng-model = "canfname" placeholder="&nbsp;First Name" style="width: 420px; height: 40px; margin-top: 20px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px; color: gray; font-family: Century Gothic; " required /><br>
+     <input type="text" ng-model= "canmname" placeholder="&nbsp;Middle Name" style="width: 420px; height: 40px; margin-top: 1px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px; color: gray; font-family: Century Gothic;" required /><br>
+    <input type="text" ng-model= "canlname" placeholder="&nbsp;Last Name" style="width: 420px; height: 40px; margin-top: 1px;  font-size: 20px; border: none;  box-shadow: 0px 1px 5px #888888; border-radius: 2px; color: gray; font-family: Century Gothic;" required /><br>
+  
+        <button type="submit" ng-click="submit(positions,canfname, canmname, canlname); positions=null;canfname=null;canmname=null;canlname=null;"  style="background-color: #4d90ef; color: white; width: 300px; height: 45px; margin-top: 13px;  font-size: 20px; border: none; border-radius: 2px;">Submit</button>
+    </form>
+    </div></center>
+
+</body>
+</html>
+
